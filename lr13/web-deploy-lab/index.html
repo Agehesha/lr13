@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Launch | Лабораторна робота з веб-деплою</title>
+    <meta name="description" content="Сучасний промо-сайт навчального проєкту про розгортання статичних вебдодатків на Render.com та GitHub.">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" aria-label="Вгору" title="Наверх">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<!-- Header Section -->
+<header class="main-header">
+    <div class="container header-container">
+        <a href="#hero" class="logo">
+                <span class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00f2fe" />
+                                <stop offset="100%" stop-color="#4facfe" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+            <span class="logo-text">DigitalLaunch</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Меню</span>
+            <span class="hamburger"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <nav id="primary-navigation" class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">Про проєкт</a></li>
+                <li><a href="#features" class="nav-link">Можливості</a></li>
+                <li><a href="#tech" class="nav-link">Технології</a></li>
+                <li><a href="#steps" class="nav-link">Етапи</a></li>
+                <li><a href="#benefits" class="nav-link">Переваги</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contacts" class="nav-link">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <!-- Theme Switcher -->
+        <div class="header-actions">
+            <button id="themeToggleBtn" class="theme-toggle" aria-label="Змінити тему" title="Змінити тему">
+                <!-- Sun Icon -->
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <!-- Moon Icon -->
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-gradients">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content scroll-reveal">
+                <span class="badge">Лабораторна робота №1</span>
+                <h1 class="hero-title">Розгортання сучасних вебдодатків на хмарних серверах</h1>
+                <p class="hero-subtitle">
+                    Опануйте повний цикл публікації статичних вебсайтів. Проєкт розроблено на чистому HTML/CSS/JS із сучасним адаптивним дизайном, оптимізованим для миттєвого деплою на платформу Render.com.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="heroDeployBtn">
+                        <span>Спробувати деплой</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                    <a href="#steps" class="btn btn-secondary">
+                        <span>Читати інструкцію</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual scroll-reveal">
+                <div class="mockup-card">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="mockup-address">digital-launch.onrender.com</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="terminal-line"><span class="t-accent">$</span> git init</div>
+                        <div class="terminal-line t-dim">Initialized empty Git repository...</div>
+                        <div class="terminal-line"><span class="t-accent">$</span> git commit -m "feat: initial deploy"</div>
+                        <div class="terminal-line t-dim">10 files changed, 250 insertions(+)</div>
+                        <div class="terminal-line"><span class="t-accent">$</span> git push origin main</div>
+                        <div class="terminal-line t-success">✓ Deploying site to Render static server...</div>
+                        <div class="terminal-line t-success">✓ Live URL: https://digital-launch.onrender.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Про проєкт</span>
+                <h2 class="section-title">Мета та концепція розробки</h2>
+                <p class="section-desc">
+                    Ця лабораторна робота покликана продемонструвати практичні навички роботи з сучасними інструментами веб-верстки та хмарного хостингу.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-info-card scroll-reveal">
+                    <h3>Чому це важливо?</h3>
+                    <p>
+                        Створення вебсайту — лише половина успіху. Справжній інженер повинен вміти самостійно налаштувати життєвий цикл коду: від написання першого тегу до публікації на світовому хостингу.
+                    </p>
+                    <p>
+                        Ми відмовилися від складних серверних фреймворків (Node, Laravel) на користь чистого, швидкого та енергоефективного статичного фронтенду. Це дозволяє досягти максимальної швидкості завантаження та безперебійної роботи.
+                    </p>
+                </div>
+                <div class="about-stats scroll-reveal">
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Чистий HTML/CSS/JS</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">0 $</span>
+                        <span class="stat-label">Вартість хостингу</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">A+</span>
+                        <span class="stat-label">Оцінка швидкості</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Доступність у мережі</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section section-padding alternate-bg">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Можливості</span>
+                <h2 class="section-title">Що ми отримуємо після деплою</h2>
+                <p class="section-desc">
+                    Сучасні хмарні сервери пропонують потужну інфраструктуру навіть на безкоштовному тарифі.
+                </p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h3>Автоматичне оновлення (CI/CD)</h3>
+                    <p>При кожному новому комміті в GitHub ваш сайт на сервері автоматично оновлюється за 30 секунд.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h3>Безкоштовний SSL (HTTPS)</h3>
+                    <p>Ваші користувачі захищені завдяки автоматично згенерованому сертифікату безпеки Let's Encrypt.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>Глобальний CDN хостинг</h3>
+                    <p>Завантажуйте статичні файли миттєво з найближчого до вашого користувача вузла серверної мережі Cloudflare.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h3>Власні домени</h3>
+                    <p>Можливість легко підв'язати власне придбане доменне ім'я замість стандартного безкоштовного піддомену.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="tech" class="tech-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Технології</span>
+                <h2 class="section-title">Стек інструментів проєкту</h2>
+                <p class="section-desc">
+                    Мінімалістичний та швидкий технологічний стек, що гарантує 100 балів у Google PageSpeed.
+                </p>
+            </div>
+            <div class="tech-grid">
+                <!-- Tech 1 -->
+                <div class="tech-item scroll-reveal">
+                    <div class="tech-logo logo-html">HTML5</div>
+                    <h4>Семантична структура</h4>
+                    <p>Розмітка відповідно до сучасних стандартів SEO та доступності (Accessibility).</p>
+                </div>
+                <!-- Tech 2 -->
+                <div class="tech-item scroll-reveal">
+                    <div class="tech-logo logo-css">CSS3</div>
+                    <h4>Сучасний дизайн</h4>
+                    <p>Змінні, Flexbox/Grid, скляні ефекти, адаптивна сітка та темна тема.</p>
+                </div>
+                <!-- Tech 3 -->
+                <div class="tech-item scroll-reveal">
+                    <div class="tech-logo logo-js">JS ES6</div>
+                    <h4>Інтерактивність</h4>
+                    <p>Intersection Observer API для анімацій, обробники подій та керування темами.</p>
+                </div>
+                <!-- Tech 4 -->
+                <div class="tech-item scroll-reveal">
+                    <div class="tech-logo logo-git">GIT</div>
+                    <h4>Контроль версій</h4>
+                    <p>Локальне збереження та логування змін коду для подальшої синхронізації.</p>
+                </div>
+                <!-- Tech 5 -->
+                <div class="tech-item scroll-reveal">
+                    <div class="tech-logo logo-github">GitHub</div>
+                    <h4>Хмарний репозиторій</h4>
+                    <p>Зберігання кодової бази проєкту та тригер для автоматичної збірки.</p>
+                </div>
+                <!-- Tech 6 -->
+                <div class="tech-item scroll-reveal">
+                    <div class="tech-logo logo-render">Render</div>
+                    <h4>Хостинг (Static)</h4>
+                    <p>Хмарний безкоштовний хостинг з миттєвим розгортанням з GitHub.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps to Deploy Section -->
+    <section id="steps" class="steps-section section-padding alternate-bg">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Етапи роботи</span>
+                <h2 class="section-title">Покроковий алгоритм розгортання</h2>
+                <p class="section-desc">
+                    Виконайте ці прості кроки, щоб опублікувати цей сайт у всесвітній мережі Інтернет.
+                </p>
+            </div>
+            <div class="timeline">
+                <!-- Step 1 -->
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Створення локальної папки</h3>
+                        <p>Створіть робочу директорію на комп'ютері та помістіть туди файли <code>index.html</code>, <code>style.css</code> та <code>script.js</code>.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Ініціалізація Git репозиторію</h3>
+                        <p>У терміналі виконайте команди <code>git init</code>, додайте файли через <code>git add .</code> та зробіть перший комміт.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Створення проєкту на GitHub</h3>
+                        <p>Створіть новий публічний репозиторій на GitHub, зв'яжіть його з локальною папкою та завантажте туди код (<code>git push -u origin main</code>).</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Деплой на Render.com</h3>
+                        <p>Авторизуйтесь на Render через GitHub, оберіть "New Static Site", підключіть ваш репозиторій, залиште поле збірки пустим і запустіть процес.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Переваги</span>
+                <h2 class="section-title">Чому Render.com є чудовим вибором?</h2>
+                <p class="section-desc">
+                    Аналіз ключових переваг платформи Render для розміщення статичних портфоліо та навчальних проєктів.
+                </p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card scroll-reveal">
+                    <div class="benefit-number">01</div>
+                    <h3>Зручна інтеграція</h3>
+                    <p>Повне підключення до репозиторіїв GitHub/GitLab в один клік без необхідності конфігурації через консоль.</p>
+                </div>
+                <div class="benefit-card scroll-reveal">
+                    <div class="benefit-number">02</div>
+                    <h3>Висока швидкість завантаження</h3>
+                    <p>На відміну від багатьох безкоштовних альтернатив, статичні сайти на Render не "засинають" і відповідають миттєво.</p>
+                </div>
+                <div class="benefit-card scroll-reveal">
+                    <div class="benefit-number">03</div>
+                    <h3>Повністю безкоштовний тариф</h3>
+                    <p>Ви отримуєте безкоштовний трафік у розмірі до 100 ГБ на місяць, чого з запасом вистачить для будь-якої лабораторної роботи чи портфоліо.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section section-padding alternate-bg">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Часті питання</span>
+                <h2 class="section-title">Відповіді на запитання</h2>
+                <p class="section-desc">
+                    Зібрали найпопулярніші запитання студентів, що виникають під час першої публікації сайтів.
+                </p>
+            </div>
+            <div class="faq-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Що таке Static Site на Render?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Це тип хостингу для сайтів, що складаються виключно з клієнтських файлів (HTML, CSS, JS, зображення). Вони не потребують виконання коду на стороні сервера (на кшталт Node чи PHP) та віддаються користувачеві в оригінальному вигляді, що забезпечує максимальну продуктивність.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Чи потрібно платити за використання Render.com?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ні. Для звичайних статичних сайтів діє повністю безкоштовний тариф, який включає безкоштовні SSL, підключення власного домену та 100 ГБ щомісячного трафіку без прихованих платежів.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Що робити, якщо сайт не оновився після зміни коду?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Перевірте, чи зробили ви <code>git commit</code> та <code>git push</code> у правильну гілку на GitHub (наприклад, <code>main</code>). Платформа Render автоматично відслідковує зміни саме у тій гілці, яку ви вказали при налаштуванні. Якщо деплой не почався, можна запустити його вручну через кнопку "Manual Deploy" в панелі Render.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Які обмеження безкоштовного тарифу Render?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Для статичних сайтів ліміт трафіку становить 100 ГБ/місяць. Якщо ви розгортаєте веб-службу (наприклад, сервер на Node.js), то він буде "засинати" після 15 хвилин бездіяльності. На щастя, для статичних сайтів (Static Sites) такої проблеми немає — вони працюють миттєво завжди.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section id="contacts" class="contact-section section-padding">
+        <div class="container contact-container">
+            <div class="contact-card scroll-reveal">
+                <div class="contact-info">
+                    <h2>Зворотний зв'язок</h2>
+                    <p>Маєте запитання щодо виконання роботи? Надішліть повідомлення і ми допоможемо розібратися з деплоєм.</p>
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>student@nure.ua</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+380 (50) 123-45-67</span>
+                        </div>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="userName">Ваше ім'я</label>
+                        <input type="text" id="userName" name="name" required placeholder="Олександр">
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Електронна пошта</label>
+                        <input type="email" id="userEmail" name="email" required placeholder="alex@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="userMsg">Повідомлення</label>
+                        <textarea id="userMsg" name="message" required rows="4" placeholder="Привіт! Як додати кастомний домен на Render?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Надіслати форму</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer class="main-footer-section">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <a href="#hero" class="logo">
+                <span class="logo-text">DigitalLaunch</span>
+            </a>
+            <p>Лабораторна робота з дисципліни "Веб-технології та дизайн".</p>
+        </div>
+        <div class="footer-links">
+            <h4>Швидкі посилання</h4>
+            <ul>
+                <li><a href="#about">Про проєкт</a></li>
+                <li><a href="#steps">Етапи</a></li>
+                <li><a href="#faq">Часті питання</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h4>Студентська інформація</h4>
+            <p>Виконав: студент групи КІ-22</p>
+            <p>Рік виконання: 2026</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2026 Digital Launch. Усі права захищено. Навчальний проєкт.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Toast Notifications Container -->
+<div id="toastContainer" class="toast-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
